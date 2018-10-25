@@ -1,0 +1,37 @@
+<div>
+  <h1>Date,lowercase,uppercase pipes</h1>
+  <p>{{datePipe}}</p>
+  <p>today date is {{datePipe|date}}</p>
+  <p>toaday date is {{datePipe|date|uppercase}} in uppercase</p>
+  <p>today date is {{datePipe|date|lowercase}} in lowercase</p>
+  <p>{{datePipe|date:"full"}}</p>
+  <p>{{datePipe|date:"fullDate"}}</p>
+  <p>{{datePipe|date:"fullTime"}}</p>
+</div>
+<div>
+  <h1>json pipes</h1>
+  <p>{{ob}}</p>
+  <p>json object is {{ob|json}}</p>
+</div>
+<div>
+  <h1>Currency pipes</h1>
+  <p>{{x}}</p>
+  <p>currency is {{x|currency:"INR"}}</p>
+  <p>currency is {{x|currency:"EUR"}}</p>
+</div>
+<div>
+  <h1>Percentage pipes</h1>
+  <p>{{y}}</p>
+  <p>currency is {{y|percent}}</p>
+  <p>currency is {{x|percent:"5.4-4"}}</p>
+</div>
+<h2>Async Pipe Example</h2>
+<p>{{pro | async}}</p>
+<button (click)="asyn()">Click me</button>
+
+
+<h1>For custom pipes</h1>
+<p>In ascending order {{asc|ascending}}</p>
+<p>In descending order {{asc|descending}}</p>
+<input #in type="number"><button  on-click="click(in.value)">submit</button>
+<p>for number pipe {{loworhigh|calculate}}</p>
